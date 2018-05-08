@@ -1,0 +1,213 @@
+/*
+
+JQUERY LAB PART 1
+
+Task: Set up the initial website using HTML/CSS/jQuery based on the wireframes given to you.
+What does the application do?
+
+//1. Displays the restaurant’s floor plan.
+//2. Visually notifies the user that seats are available or not.
+//3. Displays a form when an open table is clicked on.
+//4. Hides the form when the user submits the form.
+Build Specifications:
+//1. Each table must have either an “available” or a “reserved” class.
+//2. The form must remain hidden until a user clicks on a table with the class “available”.
+//3. There should be a way for the user to exit the form without submitting.
+//4. When the user submits the form, the form is hidden and the class of the selected seat
+    is changed from “available” to “reserved”.
+//5. Change the cursor property to “not-allowed” if the table has a “reserved” class.
+6. Changes the appearance of an open table when the mouse moves over the table, as
+well as changes the cursor.
+Note:
+We are not using the form’s values at all within this first part.
+
+*/ 
+/* * {
+    box-sizing: border-box; 
+    margin: 0; 
+    padding: 0; 
+    border: none;  
+} */
+
+.header {
+    text-align: center; 
+    font-family: 'Rubik', sans-serif;
+    color: #E34E45; 
+}
+
+.header2 {
+    text-align: center; 
+    font-family: 'Rubik', sans-serif;
+}
+
+
+body  {
+    margin: 0;
+    height: 100vh; 
+    font-family: 'Roboto Mono', monospace;
+    background-color: #E1D7D4; 
+   }
+
+#table_container {
+    display: flex; 
+    justify-content: center; 
+}
+
+.tables {
+    background-color: #EEE; 
+    width: 300px; 
+    height: 300px; 
+    align-items: center; 
+    justify-content: center; 
+    box-shadow: 0px 5px 15px 1px rgba(0,0,0,0.3);
+}
+
+.table_button {
+   border-radius: 100%; 
+   width: 65px; 
+   height: 65px; 
+   border: none; 
+   margin: 5px; 
+   margin-top: 20px; 
+   margin-left: 20px; 
+   align-items: center; 
+   justify-content: center; 
+   background-color: #CCC; 
+   cursor: cell;
+   transition: all 0.3s ease-out;
+   outline: none;
+
+  }
+
+.available:hover {
+    background-color: #ADAAAA; 
+}
+
+.reserved {
+    cursor: not-allowed; 
+}
+
+#form_container {
+    display: none; 
+}
+
+form{
+    display: flex; 
+    flex-direction: column; 
+  
+    
+}
+
+
+#header_3 {
+    font-family: 'Rubik', sans-serif;
+    color: #E34E45;  
+    margin-left: 10px; 
+}
+
+
+#header_6 {
+    font-family: 'Rubik', sans-serif;
+    text-align: center; 
+    margin-left: 10px; 
+    margin-top: 15px; 
+    margin-bottom: 14px;
+}
+
+
+
+.table-number {
+    display: flex;
+    flex-direction: row; 
+}
+
+#table_num {
+    background-color: #EEE;
+    border: none; 
+    outline: none;
+    justify-content: center; 
+    align-items: center;     
+    margin-left: 10px;
+    margin-top: 5px;
+
+}
+
+
+
+.pop-form { 
+    position: relative;
+    transform: translate(4%, -81%);  
+    background-color: #EEE; 
+    flex-direction: column; 
+    display: flex;
+    flex-direction: column;
+    width: 340px; 
+    height: 340px; 
+    box-shadow: 0px 5px 15px 1px rgba(0,0,0,0.3);
+}
+
+
+#name,#num, #cust {
+    border: none; 
+    padding: 10px; 
+    background-color: #EEE;  
+    border-bottom: 1px solid #ADAAAA;
+    outline: none;
+
+
+}
+
+#save_button {
+    background-color: #008000; 
+    color:  #EEE; 
+    border-radius: 2px; 
+    width: 80%; 
+    height: 20%; 
+    text-align: center;  
+    margin: 25px; 
+    box-shadow: 0px 5px 15px 1px rgba(0,0,0,0.3);
+}
+
+
+
+  @media only screen and (min-width: 600px){
+
+    .header {
+        text-align: center; 
+        margin-top: 10px; 
+    }
+    
+    .header2 {
+        text-align: center; 
+    }
+
+
+    .tables {
+        background-color: #EEE; 
+        width: 400px; 
+        height: 400px; 
+        align-items: center; 
+        justify-content: center; 
+    }
+
+
+    .table_button {
+        border-radius: 100%; 
+        width: 100px; 
+        height: 100px; 
+        border: none; 
+        margin: 5px; 
+        margin-top: 20px; 
+        margin-left: 18px; 
+        align-items: center; 
+        justify-content: center; 
+        background-color: #CCC; 
+     
+    }
+
+    .pop-form {
+        transform: translate(127%, -94%);
+    }
+
+
+  }

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Table Reservations</title>
+    <link rel="stylesheet" type="text/css" href="style.css"/> 
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Mono|Rubik:700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+</head>
+<body>
+    <h1 class="header">Table Finder</h1>
+    <h4 class="header2">Pick Your Table Now</h4>
+    <section id="table_container"> 
+        <div class="tables">
+            <input type="button" value="1" class="table_button available">
+            <input type="button" value="2" class="table_button available">
+            <input type="button" value="3" class="table_button reserved">
+            <input type="button" value="4" class="table_button reserved">
+            <input type="button" value="5" class="table_button available">
+            <input type="button" value="6" class="table_button reserved">
+            <input type="button" value="7" class="table_button reserved">
+            <input type="button" value="8" class="table_button available">
+            <input type="button" value="9" class="table_button available">
+        </div>
+    </section>
+<div id="form_container">
+    <form class="pop-form">
+        <i class="material-icons">clear</i>
+        <h3 id="header_3">New Reservation</h3>
+        <div class="table-number">
+            <h6 id="header_6">Table Number:</h6>
+            <input id="table_num" placeholder="">
+        </div>
+        <input id="name" placeholder="name">
+        <input id="num" placeholder="number">
+        <input id="cust" placeholder="customer"> 
+        <button type="button" id="save_button">Save</button>
+    </form>
+</div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="table.js"></script>
+</body>
+</html>
