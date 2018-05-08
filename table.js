@@ -12,7 +12,7 @@ icon.click(() => {
 
 let save= $("#save_button"); 
 save.click(() => {
-    $("#form_container").toggle().
+    $("#form_container").toggle(). 
     addClass("reserved").removeClass("available");
 
 })
