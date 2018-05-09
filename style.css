@@ -114,6 +114,7 @@ body  {
     justify-content: center; 
     background-color: #ADAAAA; 
     color: #CCC; 
+    outline: none; 
     /* transition: all 0.3s ease-out;
     outline: none; */
 }
@@ -255,6 +256,7 @@ form{
         justify-content: center;  
         background-color: #ADAAAA; 
         color: #CCC; 
+        outline: none; 
         /* transition: all 0.3s ease-out;
         outline: none; */
     }
